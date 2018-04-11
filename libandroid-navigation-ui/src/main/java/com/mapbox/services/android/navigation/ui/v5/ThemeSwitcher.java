@@ -80,7 +80,7 @@ public class ThemeSwitcher {
    * @param context to retrieve {@link SharedPreferences} and an instance of {@link IconFactory}
    * @return {@link Icon} map marker dark or light
    */
-  static Icon retrieveMapMarker(Context context) {
+  public static Icon retrieveMapMarker(Context context) {
     TypedValue destinationMarkerResId = resolveAttributeFromId(context, R.attr.navigationViewDestinationMarker);
     int markerResId = destinationMarkerResId.resourceId;
     IconFactory iconFactory = IconFactory.getInstance(context);
@@ -95,7 +95,7 @@ public class ThemeSwitcher {
    * @param styleResId for the given style
    * @return resolved style resource Id
    */
-  static int retrieveNavigationViewStyle(Context context, int styleResId) {
+  public static int retrieveNavigationViewStyle(Context context, int styleResId) {
     TypedValue outValue = resolveAttributeFromId(context, styleResId);
     return outValue.resourceId;
   }
